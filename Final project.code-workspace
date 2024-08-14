@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": "../../../../../Desktop/Final project"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"*.1": "c",
+			"iostream": "cpp",
+			"thread": "cpp",
+			"iosfwd": "cpp"
+		}
+	}
+}

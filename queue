@@ -1,0 +1,42 @@
+
+#include <iostream> 
+#include <queue> 
+
+using namespace std; 
+ 
+int main() 
+{ 
+    // Declare a queue of char 
+    queue<char> keyQueue; 
+ 
+    // Loop until the user presses ESC 
+    while (true) 
+    { 
+        // Check if a key has been pressed 
+        if (kbhit()) 
+        { 
+            // Read the key and add it to the queue 
+            char key = getch(); 
+            keyQueue.push(key); 
+ 
+            // If the key is ESC, break the loop 
+            if (key == 27) 
+                break; 
+        } 
+ 
+        // Check if the queue is not empty 
+        if (!keyQueue.empty()) 
+        { 
+            // Get the first element of the queue 
+            char key = keyQueue.front(); 
+ 
+            // Process the key 
+            cout << "You pressed: " << key << endl; 
+ 
+            // Remove the key from the queue 
+            keyQueue.pop(); 
+        } 
+    } 
+ 
+    return 0; 
+} 
